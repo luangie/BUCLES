@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <hr> OPERADORES </hr>
+    <p id = "resta"></p>
+    <p id = "porcentaje"></p>
+    <p id = "division"></p>
+    
+    <hr> VARIABLES </hr>
+    <p id = "funcion1"></p>
+    <p id = "funcionvariable"></p>
+    <p id = "funcionvariable2"></p>
+    <p id = "funcionvariable3"></p>
+    
+    <hr> OBJETOS </hr>
+    <p id = "marcacelular"></p>
+    <p id = "Nombres"></p>
+    <p id = "Nombres1"></p>
+    
+    <hr> ARREGLOS </hr>
+    <p id = "arreglo1"></p>
+    <p id = "arreglo2"></p>
+    <p id = "arreglo3"></p>
+    <p id = "arreglo4"></p>
+    
+  
+    
+    <script >
+
+          //INICIO OPERACIONES//
+
+     
+        var x = 20;
+            x= -3;
+            document.getElementById("resta").innerHTML = x;
+
+            var y =90;
+            y %=50;
+            document.getElementById("porcentaje").innerHTML = y; 
+            
+            var z =150;
+            z /=3;
+            document.getElementById("division").innerHTML = z;
+
+
+
+
+  // ejemplos variables//      
+
+         var x = myfunction(5, 8);
+         document.getElementById("funcion1").innerHTML = x;
+
+         function myfunction(a, b) {
+             return a * b;
+            }
+
+         myfunction();
+
+         function myfunction(){ 
+             var nombredefruta ="manzana";
+             document.getElementById("funcionvariable").innerHTML = 
+             typeof nombredefruta + " " + nombredefruta; 
+
+             document.getElementById("funcionvariable2").innerHTML = 
+             typeof nombredefruta 
+             
+            }
+
+            
+
+// ejemplos objetos//
+
+              var cel ={type: "Motorola", modelo: "G9plus", color: "azul"};
+              document.getElementById("marcacelular").innerHTML = "el celular es modelo" + cel.modelo;
+
+ 
+            var person = { 
+           firstname: "Maria",
+             lastname: "perez",
+            id : 5566
+             };
+             document.getElementById("Nombres").innerHTML = person["firstname"] + " " + person["lastname"];
+
+        
+             var person = { 
+           firstname: "juan",
+            lastname: "diaz",
+            age: "35",
+             };
+             document.getElementById("Nombres1").innerHTML = person["firstname"] + " " + person["lastname"] + " " + person["age"];
+
+            
+            
+             //INICIO ARRAY//
+
+            var cellphones =  [ "Iphone", "Motorola", "LG" ];
+            document.getElementById("arreglo1").innerHTML = cellphones;
+
+            var cellphones = new Array ("Nokia", "Alcatel", "Sony" );
+            document.getElementById("arreglo2").innerHTML = cellphones;
+
+
+            var cellphones =  [ "Iphone", "Motorola", "LG" ];
+            document.getElementById("arreglo3").innerHTML = cellphones[1];
+
+            var cellphones =  [ "Iphone", "Motorola", "LG" ];
+            document.getElementById("arreglo4").innerHTML = cellphones.length
+
+
+
+        
+            
+    
+    </script>
+</body>
+</html>
+
+
+   
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

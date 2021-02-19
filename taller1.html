@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <hr> ARREGLOS </hr>
+    
+    <p id = "Metodo1"></p>
+  
+    <button onclick = "mymarca()">click</button>
+    <p id = "Metodo2"></p>
+    <p id = "Metodo2."></p> 
+
+    <hr> OPERADORES DE COMPARACION </hr>
+
+    <p>Ingrese su edad y haga click en el boton :</p>
+      <input id="edad" value="50" />
+      <button onclick="myfunction()">click</button>
+      <p id = "operador"></p>
+
+      <hr> INSTRUCCION SWITCH </hr>
+      <p id = "mifrutapreferida"></p>
+
+      <hr> BUCLES  JS</hr>
+      <p id = "for"></p>
+      <p id = "for1"></p>
+
+      <hr> BUCLES  WHILE</hr>
+      <p id = "demo"></p>
+      <p id = "exacto"></p>
+      
+      <hr> ROMPER Y CONTINUAR</hr>
+      <p id = "nombrespersonas"></p>
+
+      <hr> ELEMENTOS DOM HTML</hr>
+      <form 
+        id="formulario" action="/action_page.php">
+        marca: <input type="text" name="name" value="mazda"><br>
+        color: <input type="text" name="name" value="rojo"><br><br>
+        modelo: <input type="text" name="name" value="2020"><br><br>
+        contactar: <input type="text" name="name" value="andres vargas"><br><br>
+        telefono: <input type="text" name="name" value=" "><br><br>
+        </form> 
+      
+      <p>Click "enviar" el valor de cada elemento en el formulario.</p>
+      
+      <button onclick="myfunction()">click</button>
+      
+      <p id="formulario"></p>
+      
+      
+      <hr>  DOM HTML</hr>
+      <p id="imagen"></p>
+      <img id="image" src="./imagenes/border_collie.jpg" width="80" height="80">
+      <p>El perro con mator capacidad de inteligencia es el border collie, su capacidad de pastoreo lo hace indispensable para trabajar en rebaños</p>
+            
+      
+
+
+    
+      <hr>  DOM CSS</hr>
+      <h1 id="color1">LO MEJOR DEL MUNDO </h1>
+      <h1 id="color2">ES VIVIR FELIZ</h1>
+      <h1 id="color3">SIEMPRE SONRIE</h1>
+
+           <button type="button" 
+            onclick="document.getElementById('color1').style.color = 'green'">
+            Haz click aqui!</button>
+          <button type="button" 
+            onclick="document.getElementById('color2').style.color = 'BLUE'">
+            Haz click aqui!</button>
+          <button type="button" 
+            onclick="document.getElementById('color3').style.color = 'pink'">
+            Haz click aqui!</button>
+
+      
+     <script >
+
+            // 5. EJERCICIO//
+
+           var cellphones =  [ "Iphone", "Motorola", "LG", "Nokia" ];
+            document.getElementById("Metodo1").innerHTML = cellphones.join( " / ")
+
+            
+
+
+          var cellphones =  [ "Iphone", "Motorola", "LG", "Nokia" ];
+          document.getElementById("Metodo2").innerHTML = cellphones;
+  
+
+           function mymarca() { 
+            document.getElementById("Metodo2.").innerHTML = cellphones.push("Sony");
+            document.getElementById("Metodo2").innerHTML = cellphones;
+             }
+
+ // 6. EJERCICIO//
+
+          function myfunction() {
+          var edad, pension;
+          edad = document.getElementById("edad").value;
+        pension = (edad < 50) ? "muy joven":"apto por edad";
+         document.getElementById("operador").innerHTML = pension + " para la pension.";
+}
+
+// 7. EJERCICIO//
+
+                     var text;
+                     switch (new Date().getDay()) {
+                    case 4:
+                    case 5:
+                    text = "me gusta la pera";
+                    break;
+                    case 0:
+                    case 6:
+                    text = "me gusta la manzana";
+                     break;
+                    default:
+                    text = "mi fruta preferidas";
+                     }
+                    document.getElementById("mifrutapreferida").innerHTML = text;
+
+
+  
+
+
+     // 8. EJERCICIO//
+
+
+    
+      var cellphones =  [ "Iphone", "Motorola", "LG", "Nokia" ];
+      var text = "";
+      var i;
+        for (i = 0; i < cellphones.length; i++) {
+        text += cellphones[i] + "<br>";
+       }
+        document.getElementById("for").innerHTML = text;
+
+
+      var text = ""; 
+      var i;
+      for (i = 0; i < 3; i++) {
+        text += "el numero es" +i +"<br>";
+        document.getElementById("for1").innerHTML = text;
+
+      }
+           //     9. EJERCICIO//
+
+
+       var cellphones =  [ "Iphone", "Motorola", "LG", "Nokia" ];
+       var i=0;
+       var text= "";
+       while (cellphones[i]) {
+         text +=  cellphones[i] +"<br>"; i ++;
+         document.getElementById("demo").innerHTML = text;
+}
+
+    
+      var text = ""
+      var x =5 
+      ;
+     do { text += "<br> el numero es" + i; i ++;
+       
+     } while (  i > 15 );
+     document.getElementById("exacto").innerHTML = text;
+
+
+
+
+  //     10. EJERCICIO//
+
+
+    var person = ["ana", "juan", "carlos", "maria", "sofia", "teresa" ];
+    var text = "";
+
+      list: {
+    text += person[0] + "<br>"; 
+    text += person[1] + "<br>"; 
+    text += person[2] + "<br>"; 
+    text += person[3] + "<br>";
+     break list; 
+     text += person[4] + "<br>";
+     text += person[5] + "<br>";
+    }
+
+     document.getElementById("nombrespersonas").innerHTML = text;
+
+         //11. ejercicio//
+
+         function myfunction() {
+         var x = document.forms["formulario"];
+         var text = "";
+         var i;
+         for (i = 0; i < x.length ;i++) {
+                    text += x.elements[i].value + "<br>";
+          }
+            document.getElementById("formulario").innerHTML = text;
+          }
+
+
+
+            //12. ejercicio//
+
+            
+            document.getElementById("imagen").src ="";
+
+
+
+                  //13. ejercicio//  
+            
+
+
+
+   </script>
+   
+   
+         
+   
+  </html>
